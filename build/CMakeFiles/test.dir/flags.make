@@ -6,5 +6,5 @@ CXX_FLAGS = -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/bor/source/test/libs/SFML/include -isystem /home/bor/SFML/include 
+CXX_INCLUDES = -isystem /home/bor/SFML/include 
 
