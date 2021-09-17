@@ -46,6 +46,4 @@ _deps
 
 #build dir
 [Bb][Uu][Ii][Ll][Dd]/
-
-#submodules
-external/
+=
