@@ -1,3 +1,0 @@
-/home/bor/source/test/build/CMakeFiles/rebuild_cache.dir
-/home/bor/source/test/build/CMakeFiles/edit_cache.dir
-/home/bor/source/test/build/CMakeFiles/test.dir
