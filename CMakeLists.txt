@@ -22,5 +22,12 @@ endif()
 
 
 add_subdirectory("${PROJECT_SOURCE_DIR}/external/SFML")
+add_subdirectory("${PROJECT_SOURCE_DIR}/external/catch")
+
 add_executable(test main.cpp)
 target_link_libraries(test sfml-graphics sfml-audio)
+
+add_executable(TESTOKUN tests/test.cpp)
+target_link_libraries(TESTOKUN PUBLIC Catch2::Catch2WithMain sfml-graphics sfml-audio)
+
+target_include_directories(TESTOKUN PRIVATE "${PROJECT_SOURCE_DIR}")
