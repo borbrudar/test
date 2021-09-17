@@ -20,6 +20,7 @@ if(NOT EXISTS "${PROJECT_SOURCE_DIR}/external/SFML/CMakeLists.txt")
     message(FATAL_ERROR "The submodules were not downloaded! GIT_SUBMODULE was turned off or failed. Please update submodules and try again.")
 endif()
 
-add_subdirectory( ${PROJECT_SOURCE_DIR}/external/SFML)
+
+add_subdirectory("${PROJECT_SOURCE_DIR}/external/SFML")
 add_executable(test main.cpp)
 target_link_libraries(test sfml-graphics sfml-audio)
