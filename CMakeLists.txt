@@ -1,10 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(test VERSION 0.1.0)
 
-#add_library(sfml-sys SHARED IMPORTED)
-#set_property(TARGET sfml-gra PROPERTY IMPORTED_LOCATION "${PROJECT_SOURCE_DIR}/libs/SFML/lib/libsfml-graphics.so.2.5.1")
-#target_link_libraries(test PRIVATE sfml-sys)
-
 find_package(Git QUIET)
 if(GIT_FOUND AND EXISTS "${PROJECT_SOURCE_DIR}/.git")
 # Update submodules as needed
@@ -24,7 +20,6 @@ if(NOT EXISTS "${PROJECT_SOURCE_DIR}/external/SFML/CMakeLists.txt")
     message(FATAL_ERROR "The submodules were not downloaded! GIT_SUBMODULE was turned off or failed. Please update submodules and try again.")
 endif()
 
-
-find_package(SFML 2.5.1 COMPONENTS graphics audio REQUIRED)
+add_subdirectory( ${PROJECT_SOURCE_DIR}/external/SFML)
 add_executable(test main.cpp)
 target_link_libraries(test sfml-graphics sfml-audio)
