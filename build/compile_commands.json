@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/bor/source/test/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/bor/source/test/libs/SFML/include -isystem /home/bor/SFML/include  -g   -o CMakeFiles/test.dir/main.cpp.o -c /home/bor/source/test/main.cpp",
+  "file": "/home/bor/source/test/main.cpp"
+}
+]
