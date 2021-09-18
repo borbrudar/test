@@ -1,15 +1,10 @@
-#include <SFML/Graphics.hpp>
+//#include <SFML/Graphics.hpp>
 #include <iostream>
-
-int bruh(){
-
-    return 1;
-}
+#include "bruh.h"
 
 int main(){
-    sf::RenderWindow window;
-
-
+    //sf::RenderWindow window;
+    bruh();
     std::cout << "test";
     std::cin.get();
     
