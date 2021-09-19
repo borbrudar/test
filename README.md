@@ -8,4 +8,4 @@ It includes SFML as a submodule.
 
 ## Catch2
 
-Catch2 testing environment soon to be added.
+Catch2 testing environment also integrated.
