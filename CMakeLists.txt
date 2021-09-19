@@ -1,7 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(spark VERSION 0.1.0)
-
-enable_testing()
+project(myProject VERSION 0.1.0)
 
 find_package(Git QUIET)
 if(GIT_FOUND AND EXISTS "${PROJECT_SOURCE_DIR}/.git")
@@ -27,17 +25,17 @@ add_subdirectory("${PROJECT_SOURCE_DIR}/external/SFML")
 add_subdirectory("${PROJECT_SOURCE_DIR}/external/catch")
 
 
-add_executable(spark main.cpp bruh.cpp bruh.h)
-target_link_libraries(spark sfml-graphics sfml-audio)
+add_executable(myProject main.cpp foo.cpp foo.h)
+target_link_libraries(myProject sfml-graphics sfml-audio)
 
-add_executable(TESTOKUN tests/test.cpp)
-target_link_libraries(TESTOKUN PUBLIC Catch2::Catch2WithMain sfml-graphics sfml-audio)
+enable_testing()
+add_executable(myTest tests/test.cpp foo.cpp foo.h)
+target_link_libraries(myTest PUBLIC Catch2::Catch2WithMain)
 
-target_include_directories(TESTOKUN PUBLIC "${PROJECT_SOURCE_DIR}")
+target_include_directories(myTest PUBLIC "${PROJECT_SOURCE_DIR}")
 
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/external/catch/extras)
 include(CTest)
 include(Catch)
-catch_discover_tests(proj)
+catch_discover_tests(myTest)
 
-#add_test(NAME TESTOKUN COMMAND Test)

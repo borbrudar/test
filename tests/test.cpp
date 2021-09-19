@@ -1,8 +1,8 @@
 #define CONFIG_CATCH_MAIN
 #include <catch2/catch_test_macros.hpp>
-#include "bruh.h"
+#include "foo.h"
 
 
-TEST_CASE("First test", "[TESTO]"){
-    REQUIRE(bruh() == 1);  
+TEST_CASE("First test", "[TEST]"){
+    REQUIRE(foo() == 1);  
 }
